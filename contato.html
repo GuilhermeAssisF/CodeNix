@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - CodeNix Cibersegurança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        /* Animações de scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .bg-pattern {
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%232b2b2b" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+            background-repeat: repeat;
+        }
+        /* Foco nos inputs */
+        .form-input:focus {
+            border-color: #06B6D4;
+            box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white bg-pattern">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-extrabold text-cyan-400 hover:text-cyan-300 transition-colors duration-200">CodeNix</a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="servicos.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Serviços</a>
+                        <a href="sobre.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sobre Nós</a>
+                        <a href="contato.html" class="bg-gray-700 text-white px-3 py-2 rounded-md text-base font-medium">Contato</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                        <span class="sr-only">Abrir menu principal</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900/90">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="servicos.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Serviços</a>
+                <a href="sobre.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sobre Nós</a>
+                <a href="contato.html" class="bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        <!-- Hero Section -->
+        <section class="bg-gray-800 py-20 relative overflow-hidden">
+             <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e9e9e' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+                <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+                    Fale <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Connosco</span>
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+                    Estamos prontos para proteger o seu negócio. Envie-nos uma mensagem ou utilize um dos nossos canais diretos para falar com um especialista.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    
+                    <!-- Contact Info -->
+                    <div class="flex flex-col justify-center reveal">
+                        <h2 class="text-3xl font-bold text-white mb-6">Informações Diretas</h2>
+                        <p class="text-gray-400 mb-8">
+                            Prefere um contacto mais direto? Aqui estão os nossos canais. O nosso horário de atendimento é de segunda a sexta, das 9h às 18h.
+                        </p>
+                        <div class="space-y-8">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 text-white">
+                                    <i class="fas fa-map-marker-alt fa-2x"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-xl font-medium text-white">Endereço</h3>
+                                    <p class="text-gray-400 mt-1">Av. Brigadeiro Faria Lima, 4055<br>Itaim Bibi, São Paulo - SP, 04538-133</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-white">
+                                    <i class="fas fa-envelope fa-2x"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-xl font-medium text-white">Email</h3>
+                                    <p class="text-gray-400 hover:text-cyan-400 transition-colors mt-1"><a href="mailto:contato@codenix.com">contato@codenix.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-green-500 to-cyan-500 text-white">
+                                    <i class="fas fa-phone-alt fa-2x"></i>
+                                </div>
+                                <div class="ml-6">
+                                    <h3 class="text-xl font-medium text-white">Telefone</h3>
+                                    <p class="text-gray-400 hover:text-cyan-400 transition-colors mt-1"><a href="tel:+551140028922">+55 (11) 4002-8922</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-2xl reveal" style="transition-delay: 150ms;">
+                         <h2 class="text-3xl font-bold text-white mb-6">Envie a sua Mensagem</h2>
+                         <form action="#" method="POST" class="space-y-6">
+                            <div>
+                                <label for="full-name" class="block text-sm font-medium text-gray-300">Nome Completo</label>
+                                <div class="mt-1">
+                                    <input type="text" name="full-name" id="full-name" autocomplete="name" class="form-input block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-900 text-white rounded-md border border-gray-700 transition" placeholder="O seu Nome">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                                <div class="mt-1">
+                                    <input id="email" name="email" type="email" autocomplete="email" class="form-input block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-900 text-white rounded-md border border-gray-700 transition" placeholder="o.seu.email@exemplo.com">
+                                </div>
+                            </div>
+                             <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300">Assunto</label>
+                                <div class="mt-1">
+                                    <input type="text" name="subject" id="subject" class="form-input block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-900 text-white rounded-md border border-gray-700 transition" placeholder="Ex: Cotação para Pentest">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300">Mensagem</label>
+                                <div class="mt-1">
+                                    <textarea id="message" name="message" rows="4" class="form-input block w-full shadow-sm py-3 px-4 placeholder-gray-500 bg-gray-900 text-white rounded-md border border-gray-700 transition" placeholder="Descreva a sua necessidade ou dúvida aqui."></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full flex justify-center py-3 px-6 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-cyan-500 transform hover:scale-105 transition-transform duration-300">
+                                    Enviar Mensagem
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="bg-gray-800 pb-12 reveal">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="w-full rounded-xl overflow-hidden shadow-2xl">
+                    <!-- O iframe abaixo é um exemplo. Substitua o `src` pelo link de incorporação do seu endereço no Google Maps. -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.471644754897!2d-46.6963989855427!3d-23.58700238466904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574230235023%3A0x1c4566c1e138a8ad!2sAv.%20Brig.%20Faria%20Lima%2C%204055%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004538-133!5e0!3m2!1spt-BR!2sbr!4v1662000000000!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                 </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900">
+        <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">Facebook</span><i class="fab fa-facebook-f fa-lg"></i></a>
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">LinkedIn</span><i class="fab fa-linkedin-in fa-lg"></i></a>
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">Twitter</span><i class="fab fa-twitter fa-lg"></i></a>
+            </div>
+            <p class="mt-8 text-center text-base text-gray-400">
+                &copy; 2025 CodeNix. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+
+</body>
+</html>

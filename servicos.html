@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - CodeNix Cibersegurança</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .cta-gradient { background-image: linear-gradient(90deg, #06B6D4 0%, #3B82F6 100%); }
+        .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; border: 1px solid transparent; }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); border-color: #06B6D4; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; will-change: opacity, transform; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .bg-pattern { background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%232b2b2b" fill-opacity="0.1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-repeat: repeat; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white bg-pattern">
+
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed w-full z-10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0"><a href="index.html" class="text-3xl font-extrabold text-cyan-400 hover:text-cyan-300 transition-colors duration-200">CodeNix</a></div>
+                <div class="hidden md:block"><div class="ml-10 flex items-baseline space-x-6"><a href="servicos.html" class="bg-gray-700 text-white px-3 py-2 rounded-md text-base font-medium">Serviços</a><a href="sobre.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Sobre Nós</a><a href="contato.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Contato</a></div></div>
+                <div class="md:hidden"><button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"><span class="sr-only">Abrir menu</span><i class="fas fa-bars"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-gray-900/90"><div class="px-2 pt-2 pb-3 space-y-1 sm:px-3"><a href="servicos.html" class="bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium">Serviços</a><a href="sobre.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Sobre Nós</a><a href="contato.html" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contato</a></div></div>
+    </header>
+
+    <main class="pt-16">
+        <section class="bg-gray-800 text-white py-20 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239e9e9e' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+                <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Nossos <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Serviços e Processos</span></h1>
+                <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-300">
+                    Mergulhe em nossos processos operacionais críticos, desenhados para oferecer a máxima proteção e visibilidade sobre o ambiente digital dos nossos clientes.
+                </p>
+            </div>
+        </section>
+
+        <section id="services-grid" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="space-y-12">
+
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 service-card reveal">
+                        <div class="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-full bg-gradient-to-br from-red-500 to-yellow-500 text-white"><i class="fas fa-fire-extinguisher fa-3x"></i></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Gerenciamento do Ciclo de Vida de Incidentes</h3>
+                            <p class="text-gray-400">Formalizamos todas as etapas de tratamento de uma ameaça: detecção, triagem, análise, contenção, erradicação, recuperação e lições aprendidas.</p>
+                            <div class="mt-4"><h4 class="font-semibold text-red-400">Por que é Crítico?</h4><p class="text-gray-400 text-sm">É a entrega de valor principal ao cliente. Uma execução ágil minimiza diretamente o impacto financeiro, operacional e de reputação de um ciberataque.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 service-card reveal">
+                        <div class="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 text-white"><i class="fas fa-tasks fa-3x"></i></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Gestão Contínua de Vulnerabilidades</h3>
+                            <p class="text-gray-400">Consiste em um ciclo contínuo de varreduras e análise para identificar, classificar e priorizar falhas de segurança nos ativos dos clientes, com relatórios claros para correção.</p>
+                            <div class="mt-4"><h4 class="font-semibold text-cyan-400">Por que é Crítico?</h4><p class="text-gray-400 text-sm">Este processo proativo permite corrigir brechas antes que sejam exploradas, transformando a segurança de uma postura reativa para uma preventiva e reduzindo a superfície de ataque.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 service-card reveal">
+                        <div class="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-full bg-gradient-to-br from-purple-500 to-indigo-500 text-white"><i class="fas fa-search-location fa-3x"></i></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Threat Hunting (Caça a Ameaças)</h3>
+                            <p class="text-gray-400">Nossos analistas seniores buscam proativamente por ameaças avançadas e não detectadas, vasculhando dados em busca de anomalias sutis que ferramentas automatizadas não identificaram.</p>
+                            <div class="mt-4"><h4 class="font-semibold text-purple-400">Por que é Crítico?</h4><p class="text-gray-400 text-sm">Enquanto a resposta a incidentes é reativa, o Threat Hunting nos permite encontrar e expulsar atacantes que já bypassaram as defesas primárias, antes que atinjam seu objetivo final.</p></div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 service-card reveal">
+                        <div class="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-full bg-gradient-to-br from-green-500 to-cyan-500 text-white"><i class="fas fa-project-diagram fa-3x"></i></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Onboarding de Clientes</h3>
+                            <p class="text-gray-400">Processo estruturado que integra um novo cliente à nossa plataforma, desde o mapeamento do escopo, instalação de agentes, coleta de logs até o ajuste fino das regras de alerta.</p>
+                            <div class="mt-4"><h4 class="font-semibold text-green-400">Por que é Crítico?</h4><p class="text-gray-400 text-sm">A qualidade do serviço depende da qualidade do onboarding. Um processo bem executado garante a visibilidade necessária, alinha expectativas e estabelece uma relação de confiança.</p></div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl shadow-2xl p-8 flex flex-col md:flex-row items-center gap-8 service-card reveal">
+                        <div class="flex-shrink-0 flex items-center justify-center h-24 w-24 rounded-full bg-gradient-to-br from-yellow-500 to-orange-500 text-white"><i class="fas fa-brain fa-3x"></i></div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-3">Gestão de Inteligência de Ameaças</h3>
+                            <p class="text-gray-400">Coletamos, analisamos e operacionalizamos informações sobre novas ameaças de fontes comerciais e open-source para criar novas regras de detecção e direcionar o Threat Hunting.</p>
+                            <div class="mt-4"><h4 class="font-semibold text-yellow-400">Por que é Crítico?</h4><p class="text-gray-400 text-sm">O cenário de ameaças evolui diariamente. Este processo garante que nossa capacidade de detecção seja proativa e relevante contra os ataques mais recentes, protegendo os clientes de ameaças futuras.</p></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-gradient py-16 text-gray-900 reveal">
+            <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between text-center lg:text-left">
+                <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                    <span class="block">Interessado em uma solução específica?</span>
+                    <span class="block text-white mt-2">Vamos detalhar como podemos ajudar seu negócio.</span>
+                </h2>
+                <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                    <div class="inline-flex rounded-md shadow-lg transform hover:scale-105 transition-transform duration-300">
+                        <a href="contato.html" class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-medium rounded-md text-cyan-700 bg-white hover:bg-gray-100">
+                            Agendar uma Reunião <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900">
+        <div class="container mx-auto py-12 px-4 sm:px-6 lg:px-8"><div class="flex justify-center space-x-6"><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">Facebook</span><i class="fab fa-facebook-f fa-lg"></i></a><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">LinkedIn</span><i class="fab fa-linkedin-in fa-lg"></i></a><a href="#" class="text-gray-400 hover:text-cyan-400 transition-colors duration-200"><span class="sr-only">Twitter</span><i class="fab fa-twitter fa-lg"></i></a></div><p class="mt-8 text-center text-base text-gray-400">&copy; 2025 CodeNix. Todos os direitos reservados.</p></div>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries, observer) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+        revealElements.forEach(element => { observer.observe(element); });
+    </script>
+</body>
+</html>
